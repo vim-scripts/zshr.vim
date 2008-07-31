@@ -1,0 +1,42 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2322
+
+Substitute previous command string, and execute substituted command.
+This plugin add ":R" command to your vim environment.
+
+------------------------------------------------------------------------------
+[command syntax]
+
+:R {old}={new}
+:R {old1}={new1} [{old2}={new2} {old3}={new3} ...]
+
+------------------------------------------------------------------------------
+[command example - 1]
+1. Execute a command.
+
+    :%s/aaabbbccc/xxxyyyzzz/g
+
+
+2. Execute ":R" command with replacement parameters.
+
+    :R a=m
+
+   (find "a" in last command, and replace "a" to "m".)
+
+
+3. Vim editor execute this command.
+
+    :%s/mmmbbbccc/xxxyyyzzz/g
+
+
+------------------------------------------------------------------------------
+[command example - 2]
+4. You want to use multiple replacement parameters,
+   you execute command this example.
+
+    :R a=m ccc=xyz bb=123
+
+   (find "a" in last command, and replace "a" to "m".
+    find "ccc" in last command, and replace "ccc" to "xyz".
+    find "bb" in last command, and replace "bb" to "123".)
+
+
